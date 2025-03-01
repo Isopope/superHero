@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SuperheroslistComponent } from './superheroslist.component';
+import { SuperherosListComponent } from './superheros-list.component';
 
-describe('SuperheroslistComponent', () => {
-  let component: SuperheroslistComponent;
-  let fixture: ComponentFixture<SuperheroslistComponent>;
+describe('SuperherosListComponent', () => {
+  let component: SuperherosListComponent;
+  let fixture: ComponentFixture<SuperherosListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SuperheroslistComponent]
+      imports: [SuperherosListComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SuperheroslistComponent);
+    fixture = TestBed.createComponent(SuperherosListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
