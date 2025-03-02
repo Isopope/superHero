@@ -1,1 +1,27 @@
-<p>superheros-list works!</p>
+<input type="text" [(ngModel)]="searchName" (input)="search()" placeholder="Rechercher un super-héros..." />
+   
+<div class="main">
+    
+    <ul class="cards">
+        @for(superhero of superHeroesList; track superhero.id){
+            <li class="cards_item">
+                <a [routerLink]="['/heroes', superhero.id]">
+                    <div class="card">
+                        <div class="card_image"><img [src]="superhero.images.md" alt="{{ superhero.name }}" /></div>
+                        <div class="card_content">
+                          <h2 class="hero_name">{{ superhero.name }}</h2>
+                          <a [routerLink]="['/heroes', superhero.id]" class="btn-details">Voir plus</a>
+                        </div>
+                      </div>
+                </a>
+                
+              </li>
+
+        }@empty {
+            <li>
+                <h2>Aucun super-héros trouvé</h2>
+            </li>
+        }  
+  </ul>
+
+  
