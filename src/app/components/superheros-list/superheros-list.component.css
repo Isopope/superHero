@@ -15,6 +15,11 @@ body {
   padding: 1rem;
 }
 
+a {
+  text-decoration: none;
+  color: inherit; 
+}
+
 .main{
   max-width: 1200px;
   margin: 0 auto;
@@ -27,7 +32,6 @@ body {
   padding: 8px;
   border-radius: 6px;
   margin-top: 10px;
-  text-decoration: none;
 }
 
 .btn-details:hover {
@@ -76,6 +80,7 @@ img {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  list-style: none;
 }
 
 
@@ -106,3 +111,23 @@ img {
   text-decoration: none;
   margin-bottom: 10px;
 }
+
+.search-bar {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #e68900;
+  border-radius: 20px;
+  outline: none;
+  transition: 0.3s;
+  margin-left: 20%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.search-bar:focus {
+  border-color: #e68900;
+  box-shadow: 0 0 8px #e68900;
+}
+

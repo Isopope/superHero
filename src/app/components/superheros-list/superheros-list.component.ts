@@ -21,9 +21,15 @@ export class SuperherosListComponent {
 
    }
    ngOnInit() {
+    this.loadHeroes()
+    
+  }
+
+  loadHeroes(){
     this.superHeroService.getAllSuperheroes().subscribe(superheroes => {
       this.superHeroesList = superheroes;
     });
+
   }
 
   search() {
