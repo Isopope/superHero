@@ -1,8 +1,8 @@
 export interface Powerstats {
-    intelligence: string;
-    strength: string;
-    speed: string;
-    durability: string;
-    power: string;
-    combat: string;
+    intelligence: number;
+    strength: number;
+    speed: number;
+    durability: number;
+    power: number;
+    combat: number;
 }
