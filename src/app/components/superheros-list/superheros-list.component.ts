@@ -17,6 +17,7 @@ import { SuperheroService } from '../../services/superhero.service';
 export class SuperherosListComponent {
   superHeroesList:Superhero[]=[];
   searchName:string='';
+  loading:boolean=true;
   constructor(private superHeroService:SuperheroService, private router:Router) {
 
    }
@@ -28,13 +29,16 @@ export class SuperherosListComponent {
   loadHeroes(){
     this.superHeroService.getAllSuperheroes().subscribe(superheroes => {
       this.superHeroesList = superheroes;
+      this.loading = false;
     });
 
   }
 
   search() {
+    this.loading = true;
     this.superHeroService.searchSuperheroes(this.searchName).subscribe(superheroes => {
       this.superHeroesList = superheroes;
+      this.loading = false;
     });
   }
 

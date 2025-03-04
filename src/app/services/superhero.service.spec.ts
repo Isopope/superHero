@@ -1,9 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { SuperheroService } from './superhero.service';
+import { TestBed } from '@angular/core/testing';
 import { Superhero } from '../models/superhero';
-import { RouterTestingModule } from '@angular/router/testing';
-import { SuperherosListComponent } from '../components/superheros-list/superheros-list.component';
+import { SuperheroService } from './superhero.service';
 
 describe('SuperheroService', () => {
   let service: SuperheroService;
@@ -11,7 +9,7 @@ describe('SuperheroService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule,RouterTestingModule],
+      imports: [HttpClientTestingModule],
       providers: [SuperheroService]
     });
 
